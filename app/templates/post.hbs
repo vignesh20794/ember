@@ -1,0 +1,13 @@
+<div>
+    {{input value=title placeholder="title"}}
+    {{input value=body placeholder="body"}}
+    <button {{action 'createPosts'}}>Create</button>
+     <button {{action 'updatePosts'}}>update</button>
+  </div>
+{{#each model as |post|}}
+<h3>{{post.title}}</h3>
+<p>{{post.body}}</p>
+<p>By:{{post.userId.name}}</p>
+<p><button {{action 'getEdit' post}}>Edit</button></p>
+<p><button {{action 'deletePosts' post}}>Delete</button></p>
+{{/each}}
