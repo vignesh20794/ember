@@ -7,10 +7,9 @@ const {
 
 export default DS.Model.extend({
     //relationship with user
-    userId : belongsTo('user'),
-
-    title : attr('string'),
-    body : attr('string')
+    userId : belongsTo("user"),
+    title : attr("string"),
+    body : attr("string")
 
     
 });
